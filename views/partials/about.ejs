@@ -1,0 +1,30 @@
+<div class="col-lg-12">
+	<div class="jumbotron" style="text-align: center;">
+	  	<h1>The About Page</h1>
+	  	<p> This page demonstrates <span class="paintRed">multiple</span> and <span class="paintRed">named</span> views </p>
+	</div>
+
+	<div class="col-lg-6">
+		<div class="row">
+			<button type="button" class="btn btn-danger" ng-show="isShowOne" ng-click="colOne()" style="float: right;">Hide Column One</button>
+			
+			<button type="button" class="btn btn-danger" ng-show="!isShowOne" ng-click="colOne()" style="float: right;">Show Column One</button>
+		</div>
+
+		<div class="row" ng-hide="!isShowOne">
+			<div ui-view="columnOne"></div>
+		</div>
+	</div>
+	
+	<div class="col-lg-6">
+		<div>
+			<button type="button" class="btn btn-danger" ng-show="isShowTwo" ng-click="colTwo()">Hide Column Two</button>
+			
+			<button type="button" class="btn btn-danger" ng-show="!isShowTwo" ng-click="colTwo()">Show Column Two</button>
+		</div>
+
+		<div ng-hide="!isShowTwo">
+			<div ui-view="columnTwo"></div>
+		</div>
+	</div>
+</div>

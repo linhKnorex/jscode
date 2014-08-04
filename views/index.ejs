@@ -1,0 +1,58 @@
+<html ng-app='uiRouter'>
+    <head>
+        <base href="/">
+        <title></title>
+        
+        <!-- Jquery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <!-- End of Jquery -->
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <!-- End of Bootstrap -->
+
+        <!-- CSS Effect -->
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <link href="/Flat-UI-master/css/flat-ui.css" rel="stylesheet">
+        <!-- End of CSS Effect -->
+
+        <!-- AngularJS files -->
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-ui/build/angular-ui.min.js"></script>
+        <script src="bower_components/angular/ui-bootstrap-tpls-0.11.0.min.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <!-- End of AngularJS files -->
+
+        <!-- Javascript Files -->
+        <script src="js/main.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/directives.js"></script>
+        <script src="js/filters.js"></script>
+        <script src="js/services.js"></script>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-inverse" style="margin-top: 15px;" role="navigation">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" ui-sref="#">AngularUI Router</a>
+                    </div>
+                    
+                    <ul class="nav navbar-nav">
+                        <li><a ui-sref="home">Home</a></li>
+                        <li><a ui-sref="about">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container">
+            <div ui-view></div>
+        </div>
+    </body>
+</html>

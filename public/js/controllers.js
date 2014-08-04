@@ -1,27 +1,56 @@
-'use strict';
+var uiControllers = angular.module('uiControllers', []);
 
-/* Controllers */
+uiControllers.controller('homeCtrl', function($scope, $location, $rootScope){
 
-angular.module('myApp.controllers', []).
-  controller('AppCtrl', function ($scope, $http) {
+});
 
-    $http({
-      method: 'GET',
-      url: '/api/name'
-    }).
-    success(function (data, status, headers, config) {
-      $scope.name = data.name;
-    }).
-    error(function (data, status, headers, config) {
-      $scope.name = 'Error!';
-    });
+uiControllers.controller('listCtrl', function($scope, $location, $rootScope){
+	$scope.dogs = ['Bernese', 'Husky', 'Goldendoodle'];
+	console.log('hahaha');
+});
 
-  }).
-  controller('MyCtrl1', function ($scope) {
-    // write Ctrl here
+uiControllers.controller('paraCtrl', function($scope, $location, $rootScope){
+	$scope.paras = ['Paragraph-1', 'Paragraph-2', 'Paragraph-3'];
+});
 
-  }).
-  controller('MyCtrl2', function ($scope) {
-    // write Ctrl here
+uiControllers.controller('aboutCtrl', function($scope, $location, $rootScope){
+	$scope.isShowOne = true;
+	$scope.isShowTwo = true;
 
-  });
+	$scope.colOne = function(){
+		$scope.isShowOne = !$scope.isShowOne;
+	}
+
+	$scope.colTwo = function(){
+		$scope.isShowTwo = !$scope.isShowTwo;
+	}
+	
+});
+
+uiControllers.controller('columnOneCtrl', function($scope, $location, $rootScope){
+
+});
+
+uiControllers.controller('columnTwoCtrl', function($scope, $location, $rootScope){
+	$scope.scotches = [
+		{
+            name: 'Macallan 12',
+            price: 50
+        },
+        {
+            name: 'Chivas Regal Royal Salute',
+            price: 10000
+        },
+        {
+            name: 'Glenfiddich 1937',
+            price: 20000
+        }   
+	];
+});
+
+
+
+
+
+
+

@@ -3,7 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "express": "~3.2.6",
-    "jade": "~0.31.2"
+    "express": "~3.4.2",
+    "jade": "~0.31.2",
+    "hjs": "0.0.6",
+    "ejs": "^1.0.0",
+    "passport": "^0.2.0",
+    "passport-local": "^1.0.0"
   }
 }
